@@ -1,0 +1,6 @@
+*
+!*.ts
+*.d.ts
+!package.json
+!.npmignore
+!.gitignore
