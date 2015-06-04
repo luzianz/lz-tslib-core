@@ -1,6 +1,6 @@
 .gitignore
 .npmignore
-*.ts
-!*.d.ts
+*.js
+*.d.ts
 npm-debug.log
 node_modules
