@@ -1,6 +1,6 @@
 {
   "name": "lz-tslib-core",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "General classes and utilities written in typescript",
   "main": "index.js",
   "repository": { 
@@ -13,6 +13,6 @@
   "author": "Luzian Zagadinow <luzianz@outlook.com> (https://github.com/luzianz)",
   "license": "MIT",
   "dependencies": {
-    "lz-tslib-interfaces": "0.0.3"
+    "lz-tslib-interfaces": "0.0.2"
   }
 }
