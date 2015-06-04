@@ -1,4 +1,3 @@
-*
-!*.d.ts
-!*.js
-!package.json
+.gitignore
+*.ts
+node_modules
