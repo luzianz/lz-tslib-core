@@ -26,27 +26,27 @@ class TrimmableSpan extends LengthDerrivedSpan {
 		this.rightSpans.push(span);
 	}
 
-	getStartIndex(): number {
+	get startIndex(): number {
 		var sti = this.leftTrimIndex + 1;
-		var si = super.getStartIndex();
+		var si = this.fGetStartIndex();
 
 		return sti > si ? sti : si;
 	}
 
-	getEndIndex(): number {
+	get endIndex(): number {
 		var eti = this.rightTrimIndex - 1;
-		var ei = super.getEndIndex();
+		var ei = this.fGetEndIndex();
 
 		return eti < ei ? eti : ei;
 	}
 
 	private get leftTrimIndex(): number {
-		var endIndices = ArrayExt.select(this.leftSpans, span => span.getEndIndex());
+		var endIndices = ArrayExt.select(this.leftSpans, span => span.endIndex);
 		return ArrayExt.aggregate(endIndices, highestNumber);
 	}
 
 	private get rightTrimIndex(): number {
-		var startIndices = ArrayExt.select(this.rightSpans, span => span.getStartIndex());
+		var startIndices = ArrayExt.select(this.rightSpans, span => span.startIndex);
 		return ArrayExt.aggregate(startIndices, lowestNumber);
 	}
 }

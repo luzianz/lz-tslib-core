@@ -3,19 +3,19 @@
 
 class LengthDerrivedSpan implements ISpan {
 	constructor(
-		private fGetStartIndex: FGetter<number>,
-		private fGetEndIndex: FGetter<number>) {
+		protected fGetStartIndex: FGetter<number>,
+		protected fGetEndIndex: FGetter<number>) {
 	}
 
-	getStartIndex(): number {
+	public get startIndex(): number {
 		return this.fGetStartIndex();
 	}
 
-	getLength(): number {
+	public get length(): number {
 		return this.fGetEndIndex() - this.fGetStartIndex();
 	}
 
-	getEndIndex(): number {
+	public get endIndex(): number {
 		return this.fGetEndIndex();
 	}
 }

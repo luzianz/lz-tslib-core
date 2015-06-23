@@ -1,15 +1,18 @@
-class Lazy<T> {
-	private hasValue: boolean = false;
-	private value: T;
-	constructor(private getter: () => T) {
-	}
+/// <reference path="node_modules/lz-tslib-interfaces/IValueContainer" />
+
+class Lazy<T> implements IValueContainer<T>{
+	private hasValue = false;
+	private _value: T;
 	
-	public getValue(): T {
+	constructor(private getter: () => T) { }
+
+	public get value(): T {
 		if (!this.hasValue) {
-			this.value = this.getter();
+			this._value = this.getter();
 			this.hasValue = true;
 		}
-		return this.value;
+
+		return this._value;
 	}
 }
 

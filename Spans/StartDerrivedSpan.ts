@@ -7,15 +7,15 @@ class StartDerrivedSpan implements ISpan {
 		private fGetLength: FGetter<number>) {
 	}
 
-	getStartIndex(): number {
+	get startIndex(): number {
 		return this.fGetEndIndex() - this.fGetLength() + 1;
 	}
 
-	getLength(): number {
+	get length(): number {
 		return this.fGetLength();
 	}
 
-	getEndIndex(): number {
+	get endIndex(): number {
 		return this.fGetEndIndex();
 	}
 }

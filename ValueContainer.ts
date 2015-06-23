@@ -4,15 +4,15 @@
 import ValueChangedEmitter = require('./ValueChangedEmitter');
 
 class ValueContainer<T> extends ValueChangedEmitter<T> implements IValueContainer<T> {
-	constructor(private value: T) {
+	constructor(private _value: T) {
 		super();
 	}
 
-	getValue(): T {
-		return this.value;
+	get value(): T {
+		return this._value;
 	}
-	setValue(newValue: T) {
-		var oldValue = this.value;
+	set value(newValue: T) {
+		var oldValue = this._value;
 		if (newValue != oldValue) {
 			var cancelled = false;
 			
@@ -21,7 +21,7 @@ class ValueContainer<T> extends ValueChangedEmitter<T> implements IValueContaine
 			});
 			
 			if (!cancelled) {
-				this.value = newValue;
+				this._value = newValue;
 				super.onValueChanged(oldValue, newValue);
 			}
 		}
