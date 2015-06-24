@@ -1,0 +1,37 @@
+{
+  "name": "lz-tslib-interfaces",
+  "version": "0.0.3",
+  "description": "General interfaces written in typscript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Luzian Zagadinow",
+    "email": "luzianz@outlook.com",
+    "url": "https://github.com/luzianz"
+  },
+  "license": "MIT",
+  "gitHead": "b4dfba9e16162ab42422f1480e46e64453982786",
+  "_id": "lz-tslib-interfaces@0.0.3",
+  "_shasum": "2b0ebc116b6827a6d1f52ccc581ffb7df0ba1b05",
+  "_from": "lz-tslib-interfaces@0.0.3",
+  "_npmVersion": "2.7.4",
+  "_nodeVersion": "0.12.2",
+  "_npmUser": {
+    "name": "luzi",
+    "email": "luzianz@outlook.com"
+  },
+  "dist": {
+    "shasum": "2b0ebc116b6827a6d1f52ccc581ffb7df0ba1b05",
+    "tarball": "http://registry.npmjs.org/lz-tslib-interfaces/-/lz-tslib-interfaces-0.0.3.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "luzi",
+      "email": "luzianz@outlook.com"
+    }
+  ],
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/lz-tslib-interfaces/-/lz-tslib-interfaces-0.0.3.tgz"
+}
