@@ -1,5 +1,4 @@
-/// <reference path="node_modules/lz-tslib-interfaces/IValueContainer" />
-/// <reference path="node_modules/lz-tslib-interfaces/INotifyValueChanged" />
+/// <reference path="typings/lz-tslib-interfaces/index.d.ts" />
 
 import EventEmitter = require('./EventEmitter');
 

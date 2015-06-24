@@ -1,5 +1,4 @@
-/// <reference path="../node_modules/lz-tslib-interfaces/ISpan" />
-/// <reference path="../node_modules/lz-tslib-interfaces/FGetter" />
+/// <reference path="../typings/lz-tslib-interfaces/index.d.ts" />
 
 class LengthDerrivedSpan implements ISpan {
 	constructor(

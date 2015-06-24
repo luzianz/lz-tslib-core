@@ -1,4 +1,4 @@
-/// <reference path="node_modules/lz-tslib-interfaces/IDisposable" />
+/// <reference path="typings/lz-tslib-interfaces/index.d.ts" />
 
 class CompositeDisposer implements IDisposable {
 	private disposables: IDisposable[] = [];
