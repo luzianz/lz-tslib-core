@@ -1,4 +1,5 @@
 /// <reference path="node_modules/lz-tslib-interfaces/IEventEmitter.d.ts" />
+/// <reference path="node_modules/lz-tslib-interfaces/IEventSubscription.d.ts" />
 
 class EventEmitter implements IEventEmitter {
 	private subscriptions: IEventSubscription[];
