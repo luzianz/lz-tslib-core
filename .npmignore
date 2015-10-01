@@ -3,6 +3,7 @@
 *.ts
 *.js.map
 .tscache
+.vscode
 Gruntfile.js
 npm-debug.log
 node_modules
