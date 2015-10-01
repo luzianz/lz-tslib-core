@@ -1,6 +1,6 @@
 {
   "name": "lz-tslib-core",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "General classes and utilities written in typescript",
   "main": "index.js",
   "repository": {
