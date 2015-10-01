@@ -1,4 +1,4 @@
-/// <reference path="../typings/lz-tslib-interfaces/index.d.ts" />
+/// <reference path="../node_modules/lz-tslib-interfaces/ISpan.d.ts" />
 
 export function isValid(span: ISpan): boolean {
 	return span.endIndex > span.startIndex;

@@ -1,4 +1,5 @@
-/// <reference path="../typings/lz-tslib-interfaces/index.d.ts" />
+/// <reference path="../node_modules/lz-tslib-interfaces/ISpan.d.ts" />
+/// <reference path="../node_modules/lz-tslib-interfaces/FGetter.d.ts" />
 
 import LengthDerrivedSpan = require('./LengthDerrivedSpan');
 import ArrayExt = require('../Array/Extensions');

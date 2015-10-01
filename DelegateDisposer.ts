@@ -1,4 +1,5 @@
-/// <reference path="typings/lz-tslib-interfaces/index.d.ts" />
+/// <reference path="node_modules/lz-tslib-interfaces/IDisposable.d.ts" />
+/// <reference path="node_modules/lz-tslib-interfaces/FAction.d.ts" />
 
 class DelegateDisposer implements IDisposable {
 	constructor(private onDispose: FAction) {

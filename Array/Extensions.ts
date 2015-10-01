@@ -1,4 +1,6 @@
-/// <reference path="../typings/lz-tslib-interfaces/index.d.ts" />
+/// <reference path="../node_modules/lz-tslib-interfaces/FPredicate.d.ts" />
+/// <reference path="../node_modules/lz-tslib-interfaces/FFunc.d.ts" />
+/// <reference path="../node_modules/lz-tslib-interfaces/FAggregator.d.ts" />
 
 export function remove<T>(
 	array: Array<T>,

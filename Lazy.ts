@@ -1,4 +1,4 @@
-/// <reference path="typings/lz-tslib-interfaces/index.d.ts" />
+/// <reference path="node_modules/lz-tslib-interfaces/IValueContainer.d.ts" />
 
 class Lazy<T> implements IValueContainer<T>{
 	private hasValue = false;
