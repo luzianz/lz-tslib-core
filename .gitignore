@@ -1,5 +1,8 @@
 *.js
+!Gruntfile.js
 *.d.ts
+*.js.map
 !/typings/
+.tscache
 npm-debug.log
 node_modules
