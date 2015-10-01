@@ -1,6 +1,8 @@
 .gitignore
 .npmignore
 *.ts
-!*.d.ts
+*.js.map
+.tscache
+Gruntfile.js
 npm-debug.log
 node_modules
