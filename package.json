@@ -3,7 +3,7 @@
   "version": "0.0.8",
   "description": "General classes and utilities written in typescript",
   "main": "index.js",
-  "repository": { 
+  "repository": {
     "type": "git",
     "url": "https://github.com/luzianz/lz-tslib-core.git"
   },
@@ -11,5 +11,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Luzian Zagadinow <luzianz@outlook.com> (https://github.com/luzianz)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "lz-tslib-interfaces": "0.0.5"
+  }
 }
