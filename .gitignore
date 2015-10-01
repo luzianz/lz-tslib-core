@@ -1,8 +1,10 @@
-*.js
-!Gruntfile.js
-*.d.ts
-*.js.map
-!/typings/
-.tscache
+/js
+
+# 3rd party
+/node_modules
+/typings
+
+# Garbage
+/.tscache
 npm-debug.log
-node_modules
+*.js.map
