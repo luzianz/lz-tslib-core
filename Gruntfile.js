@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 				files: [
 					{
 						src: ["src/**/*.ts"],
-						dest: "built"
+						dest: "js"
 					}
 				]
 			},
