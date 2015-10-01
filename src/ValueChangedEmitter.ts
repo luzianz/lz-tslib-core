@@ -1,6 +1,6 @@
-/// <reference path="node_modules/lz-tslib-interfaces/FAction.d.ts" />
-/// <reference path="node_modules/lz-tslib-interfaces/INotifyPropertyChanged.d.ts" />
-/// <reference path="node_modules/lz-tslib-interfaces/INotifyPropertyChanging.d.ts" />
+/// <reference path="../node_modules/lz-tslib-interfaces/FAction.d.ts" />
+/// <reference path="../node_modules/lz-tslib-interfaces/INotifyPropertyChanged.d.ts" />
+/// <reference path="../node_modules/lz-tslib-interfaces/INotifyPropertyChanging.d.ts" />
 
 import EventEmitter = require('./EventEmitter');
 

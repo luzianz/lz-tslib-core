@@ -2,12 +2,20 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		ts: {
 			"default" : {
-				src: ["**/*.ts", "!node_modules/**/*.ts"]
+				//src: ["**/*.ts", "!node_modules/**/*.ts"]
+				files: [
+					{
+						src: ["src/**/*.ts"],
+						dest: "built"
+					}
+				]
 			},
 			options: {
 				"module": "commonjs",
 				comments: false,
-				target: "es5"
+				target: "es5",
+				declaration: false,
+				sourceMap: false
 			}
 		}
 	});

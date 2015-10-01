@@ -1,4 +1,4 @@
-/// <reference path="node_modules/lz-tslib-interfaces/IValueContainer.d.ts" />
+/// <reference path="../node_modules/lz-tslib-interfaces/IValueContainer.d.ts" />
 
 import ValueChangedEmitter = require('./ValueChangedEmitter');
 
