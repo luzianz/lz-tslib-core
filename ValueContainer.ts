@@ -1,4 +1,4 @@
-/// <reference path="typings/lz-tslib-interfaces/index.d.ts" />
+/// <reference path="node_modules/lz-tslib-interfaces/IValueContainer.d.ts" />
 
 import ValueChangedEmitter = require('./ValueChangedEmitter');
 
@@ -21,7 +21,7 @@ class ValueContainer<T> extends ValueChangedEmitter<T> implements IValueContaine
 			
 			if (!cancelled) {
 				this._value = newValue;
-				super.onValueChanged(oldValue, newValue);
+				super.onValueChanged();
 			}
 		}
 	}
