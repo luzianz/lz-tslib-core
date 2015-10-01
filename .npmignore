@@ -1,9 +1,8 @@
 .gitignore
 .npmignore
-*.ts
-*.js.map
-.tscache
-.vscode
+/src
+/.tscache
+/.vscode
 Gruntfile.js
 npm-debug.log
 node_modules
