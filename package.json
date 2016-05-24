@@ -13,7 +13,6 @@
   "author": "Luzian Zagadinow <luzianz@outlook.com> (https://github.com/luzianz)",
   "license": "MIT",
   "dependencies": {
-    "lz-tslib-interfaces": "0.0.5"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
