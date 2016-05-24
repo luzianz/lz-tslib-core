@@ -1,13 +1,16 @@
-/// <reference path="../node_modules/lz-tslib-interfaces/IDisposable.d.ts" />
-/// <reference path="../node_modules/lz-tslib-interfaces/FAction.d.ts" />
+/// <reference path="./Interfaces/FAction.d.ts" />
 
-class DelegateDisposer implements IDisposable {
-	constructor(private onDispose: FAction) {
+import DisposerBase = require('./DisposerBase');
+
+class DelegateDisposer extends DisposerBase {
+	
+	constructor(private _onDispose: FAction) {
+		super();
 	}
 
-	dispose() {
-		if (this.onDispose) {
-			this.onDispose();
+	protected onDispose(): void {
+		if (this._onDispose) {
+			this._onDispose();
 		}
 	}
 }
