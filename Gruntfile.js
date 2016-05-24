@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 			options: {
 				"module": "commonjs",
 				comments: false,
-				target: "es5",
+				target: "es6",
 				declaration: false,
 				sourceMap: false
 			}
