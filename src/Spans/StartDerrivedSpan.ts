@@ -1,21 +1,22 @@
-/// <reference path="../../node_modules/lz-tslib-interfaces/ISpan.d.ts" />
-/// <reference path="../../node_modules/lz-tslib-interfaces/FGetter.d.ts" />
+/// <reference path="../Interfaces/ISpan.d.ts" />
+/// <reference path="../Interfaces/FGetter.d.ts" />
 
 class StartDerrivedSpan implements ISpan {
+	
 	constructor(
 		private fGetEndIndex: FGetter<number>,
 		private fGetLength: FGetter<number>) {
 	}
 
-	get startIndex(): number {
+	public get startIndex(): number {
 		return this.fGetEndIndex() - this.fGetLength() + 1;
 	}
 
-	get length(): number {
+	public get length(): number {
 		return this.fGetLength();
 	}
 
-	get endIndex(): number {
+	public get endIndex(): number {
 		return this.fGetEndIndex();
 	}
 }

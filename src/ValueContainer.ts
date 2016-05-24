@@ -1,29 +1,28 @@
-/// <reference path="../node_modules/lz-tslib-interfaces/IValueContainer.d.ts" />
+/// <reference path="./Interfaces/IValueContainer.d.ts" />
+/// <reference path="./Interfaces/INotifyPropertyChanged.d.ts" />
+/// <reference path="./Interfaces/IEvent.d.ts" />
 
-import ValueChangedEmitter = require('./ValueChangedEmitter');
+import EventInvoker = require('./EventInvoker');
 
-class ValueContainer<T> extends ValueChangedEmitter<T> implements IValueContainer<T> {
+class ValueContainer<T> implements IValueContainer<T>, INotifyPropertyChanged {
+
+	private _propertyChangedInvoker = new EventInvoker<IPropertyChangedEventArgs>();
+	
 	constructor(private _value: T) {
-		super();
 	}
 
-	get value(): T {
+	public get value(): T {
 		return this._value;
 	}
-	set value(newValue: T) {
-		var oldValue = this._value;
-		if (newValue != oldValue) {
-			var cancelled = false;
-			
-			super.onValueChanging(oldValue, newValue, function() {
-				cancelled = true;
-			});
-			
-			if (!cancelled) {
-				this._value = newValue;
-				super.onValueChanged();
-			}
+	public set value(newValue: T) {
+		if (newValue != this._value) {
+			this._value = newValue;
+			this._propertyChangedInvoker.invoke(this, { propertyName: 'value' });
 		}
+	}
+
+	public get propertyChanged(): IEvent<IPropertyChangedEventArgs> {
+		return this._propertyChangedInvoker.event;
 	}
 }
 
