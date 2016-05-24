@@ -1,16 +1,19 @@
-/// <reference path="../node_modules/lz-tslib-interfaces/IDisposable.d.ts" />
+/// <reference path="./Interfaces/FAction.d.ts" />
 
-class CompositeDisposer implements IDisposable {
+import DisposerBase = require('./DisposerBase');
+
+class CompositeDisposer extends DisposerBase {
+	
 	private disposables: IDisposable[] = [];
 
-	add(disposable: IDisposable) {
+	public add(disposable: IDisposable) {
+		if (this.isDisposed) return;
+		
 		this.disposables.push(disposable);
 	}
 
-	dispose() {
-		this.disposables.forEach(function (disposable) {
-			disposable.dispose();
-		});
+	protected onDispose(): void {
+		this.disposables.forEach((disposable) => disposable.dispose());
 		this.disposables.splice(0, this.disposables.length);
 	}
 }
